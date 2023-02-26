@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+  background-color: #282a36;
+  color: #f8f8f2;
+}
+
+.site-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-link {
+  padding: 5px;
+}
+
+nav a:visited,
+nav a:link {
+    color: #f8f8f2;
+    text-decoration: none;
+}
