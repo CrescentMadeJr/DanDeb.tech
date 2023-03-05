@@ -1,4 +1,11 @@
-# 20230227
+# Changelog
+
+## 20230301
+* Mopre work on headers and footers.  
+    * Including CSS work.
+* Began filling out content.
+
+## 20230227
 * Removed aside.  Will not be used.
 * Added sitemap page.
 * Updated footer.
