@@ -2,42 +2,63 @@
   margin: 0;
 }
 
+a:visited,
+a:link {
+  text-decoration: none;
+  color: #f8f8f2;
+}
+
+.page-header {
+  display: flex;
+  margin-top: 0.2em;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: #44475a;
+}
+
+.page-header,
+.page-footer {
+  font-family: Gentium Plus, Nunito, Arial, Helvetica;
+}
+
+.welcome {
+  text-align: right;
+}
+
+.title,
+.welcome {
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+}
+
 body {
   font-family: Nunito, Arial, Helvetica, sans-serif;
   background-color: #282a36;
   color: #f8f8f2;
 }
 
+h2,
+h3 {
+  color: #ff79c6;
+}
+
 .site-navigation {
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-
-.page-header {
-  display: flex;
-}
-
-.welcome {
-  position: right;
+  /* background-color: #6272a4; */
 }
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
 }
 
 .nav-link {
-  padding: 5px;
-}
-
-nav a:visited,
-nav a:link,
-footer a:visited,
-footer a:link {
-    color: #f8f8f2;
-    text-decoration: none;
+  padding-inline: 5px;
 }
 
 .page-footer {
@@ -45,7 +66,52 @@ footer a:link {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;      
+  height: 4.5rem;      
   flex-direction: column;
   align-items: center;
+}
+
+/* mouse over link */
+a:hover {
+  color: #ff79c6;
+  transition: 20ms;
+}
+
+.active {
+  color: #50fa7b;
+  border-top: 1px solid #50fa7b;
+  border-bottom: 1px solid #50fa7b;
+}
+
+.page-footer {
+  color: #bd93f9
+}
+
+.copyleft {
+  color: #ffb86c;
+}
+
+
+/* 
+Mobile screen sizes
+*/
+
+/* Hide the welcome element in the header when the screen gets too small. This is specific to the size of the welcome sentance. */
+@media (max-width: 515px) 
+{
+  .welcome
+  {
+    display: none;
+  }
+}
+
+/* Change the navegation to be easier to use when the screen is too small. */
+@media (max-width: 250px) 
+{
+  .site-navigation {
+    align-items: start;
+  }
+  .nav-links {
+    padding: 0px;
+  }
 }
