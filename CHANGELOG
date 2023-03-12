@@ -1,5 +1,12 @@
 # Changelog
 
+## To do
+* Make sure the site has a max width so it doesn't look funny.
+* Create contact page with javascript.
+* finish fun page.
+* Finish nav bar.
+* Run accessability checks.
+
 ## 20230305
 * Fixed typo below.
 * Added font for header and footer.
