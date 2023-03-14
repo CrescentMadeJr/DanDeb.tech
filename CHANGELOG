@@ -6,6 +6,12 @@
 * finish fun page.
 * Finish nav bar.
 * Run accessability checks.
+* Set max width
+
+##
+* Fixed padding in .nav-links - was pushing the whole menu right.
+* Got the accordion boxes working.  Ugh!
+
 
 ## 20230305
 * Fixed typo below.
