@@ -10,33 +10,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="site.js" async></script>
-    <style>
-/* Buttons */
-.accordion-box {
-  background-color: #50fa7b;
-  color: #282a36;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-} 
-
-.active, .accordion-box:hover {
-  filter: brightness(75%);
-  transition: 50ms;
-}
-
-.infobox {
-  padding: 0 18px;
-  display: none;
-  background-color: #50fa7b;
-  overflow: hidden;
-}
-    </style>
-    <title>Home | DanDeB</title>
+    <script rel="text/javascript" src="/site.js" async></script>
+    <title>Fun | DanDeB</title>
   </head>
   <body class="fun">
     <header class="page-header">
@@ -44,17 +19,22 @@
       <p class="welcome">Welcome to my little corner of the internet.</p>
     </header>
     <main class="page-content">
+      <!-- Navigation -->
+      <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+        <i class="fa fa-bars"></i>
+      </a>
       <nav class="site-navigation">
-        <ul class="nav-links">
+        <ul id="navLinks" class="nav-links">
           <li class="nav-link"><a href="index.html">Home</a></li>
           <li class="nav-link"><a href="about.html">About</a></li>
-          <li class="nav-link dactive"><a href="fun.html">Stuff</a></li>
+          <li class="nav-link page-active"><a href="fun.html">Stuff</a></li>
           <li class="nav-link"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <!-- Main content -->
       <article>
         <h2 class="article-heading">Fun & Interesting Stuff</h2>
-        <nav class="arrows">
+
             <section class="accordion-boxes">
 
               <button class="accordion-box">Dracula Theme</button>
@@ -81,15 +61,17 @@
                 <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</p>
               </div>
             </section>
-        </nav>
+
       </article>
+
     </main>
     <footer class="page-footer">
-      <p class="copyleft">Copyleft 2023. All Rights Waived.</p>
+      <p class="copyleft"><a href="https://developer.mozilla.org/en-US/docs/Glossary/Copyleft">Copyleft 2023.</a> All Rights Waived.</p>
       <p><small>Made by Dano.  We're all mad here.</small></p>
     </footer>
     <script>
 
-      </script>
+    </script>
   </body>
+
 </html>

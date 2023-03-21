@@ -1,30 +1,43 @@
 # Changelog
 
 ## To do
+
 * Make sure the site has a max width so it doesn't look funny.
 * Create contact page with javascript.
 * finish fun page.
 * Finish nav bar.
 * Run accessability checks.
-* Set max width
 
-##
+## Changes
+
+### 20230321
+
+* Updated headers to support hamburger button.
+* Refactored CSS with mobile first in mind.
+* Began work on contact form.
+
+I should commit more.  Lots of other work.
+
+### 20230313
+
 * Fixed padding in .nav-links - was pushing the whole menu right.
 * Got the accordion boxes working.  Ugh!
 
+### 20230305
 
-## 20230305
 * Fixed typo below.
 * Added font for header and footer.
 * Continued filling out pages and adding css.
 * Updated the header and footer with multiple changes.  Pretty happy with the look now.
 
-## 20230301
+### 20230301
+
 * More work on headers and footers.  
     * Including CSS work.
 * Began filling out content.
 
-## 20230227
+### 20230227
+
 * Removed aside.  Will not be used.
 * Added sitemap page.
 * Updated footer.

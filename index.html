@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script rel="text/javascript" src="/site.js"></script>
+    <script rel="text/javascript" src="/site.js" async></script>
     <title>Home | DanDeB</title>
   </head>
   <body>
@@ -19,19 +19,25 @@
       <p class="welcome">Welcome to my little corner of the internet.</p>
     </header>
     <main class="page-content">
+      <!-- Navigation -->
+      <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+        <i class="fa fa-bars"></i>
+      </a>
       <nav class="site-navigation">
-        <ul class="nav-links">
-          <li class="nav-link active"><a href="index.html">Home</a></li>
+        <ul id="navLinks" class="nav-links">
+          <li class="nav-link page-active"><a href="index.html">Home</a></li>
           <li class="nav-link"><a href="about.html">About</a></li>
           <li class="nav-link"><a href="fun.html">Stuff</a></li>
           <li class="nav-link"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
+      <!-- Main content -->
       <article>
         
         <h2 class="article-heading">Welcome</h2>
-        <p class="para1">Hi, I'm Dan.  Welcome to my personal page.  Here you will find information on me, and my interests.</p>
-        <p class="para2">
+        <p class="para">Hi, I'm Dan.  Welcome to my personal page.  Here you will find information on me, and my interests.</p>
+        <p class="para">
           This website was designed as part of a project for the January 2023 cohort of  <a href="https://codelouisville.org/">Code Louisville.</a>  
           I have attempted to integrate multiple design elements such as responsive manu with CSS.  Hover animations, accordion boxes, and utilizing 
           javascript for information gathering and display.  
@@ -40,7 +46,7 @@
       </article>
     </main>
     <footer class="page-footer">
-      <p class="copyleft">Copyleft 2023. All Rights Waived.</p>
+      <p class="copyleft"><a href="https://developer.mozilla.org/en-US/docs/Glossary/Copyleft">Copyleft 2023.</a> All Rights Waived.</p>
       <p><small>Made by Dano.  We're all mad here.</small></p>
     </footer>
   </body>

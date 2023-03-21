@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+}
+
+/*
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+*/
+
+nav > a:visited,
+a:visited,
+a:link {
+  text-decoration: none;
+  color: #f8f8f2;
+}
+
+.page-header {
+  display: flex;
+  margin-top: 0.2em;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: #44475a;
+}
+
+.page-header,
+.page-footer {
+  font-family: Gentium Plus, Nunito, Arial, Helvetica;
+}
+
+.welcome {
+  text-align: right;
+}
+
+.title,
+.welcome {
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+}
+
+body {
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+  background-color: #282a36;
+  color: #f8f8f2;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+h2,
+h3 {
+  color: #ff79c6;
+}
+
+.site-navigation {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0%;
+}
+
+.nav-link {
+  padding-inline: 5px;
+}
+
+.article-heading {
+  padding-bottom: 5px;
+}
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  width: 100%;
+  height: 40px;
+}
+
+/* mouse over link */
+a:hover,
+.copyleft > a:hover {
+  color: #ff79c6;
+  transition: 20ms;
+}
+
+.page-active {
+  color: #50fa7b;
+  border-top: 1px solid #50fa7b;
+  border-bottom: 1px solid #50fa7b;
+}
+
+.para {
+  padding-top: 5px;
+}
+
+.page-footer {
+  color: #bd93f9
+}
+
+.copyleft,
+.copyleft > a {
+  color: #ffb86c;
+}
+
+/*****************
+Accordion boxes */
+.accordion-boxes {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-box {
+  background-color: #bd93f9;
+  color: #282a36;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  padding: 5px;
+} 
+
+.active, .accordion-box:hover {
+  filter: brightness(75%);
+  transition: 50ms;
+}
+
+.infobox {
+  padding: 10px;
+  display: none;
+  background-color: #44475a;
+  overflow: hidden;
+}
+
+.accordion-box:after {
+  content: '\2771';
+  font-size: 13px;
+  color: #282a36;
+  float: right;
+
+}
+
+.active:after {
+  content: "\2770";
+}
+/*****************/
+
+
+/* 
+Mobile screen sizes */
+
+/* Hide the welcome element in the header when the screen gets too small. This is specific to the size of the welcome sentance. */
+@media (max-width: 515px) {
+  .welcome {
+    display: none;
+  }
+}
+
+/* Change the navegation to be easier to use when the screen is too small. */
+/* Fix this - Shouldn't use max width 
+@media (max-width: 250px) {
+  .site-navigation {
+    align-items: start;
+  }
+  .nav-links {
+    padding: 0px;
+  }
+} */ 
+
+/* Hamburger button menu */
+@media (min-width: 250px) {
+
+  .site-navigation {
+    overflow: hidden;
+    background-color: #44475a;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .site-navigation #navLinks {
+      display: none;
+  }
+  
+  /* Style navigation menu links */
+  .site-navigation a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .site-navigation a.icon {
+    background: #50fa7b;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .site-navigation a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* Style the active link (or home/logo) */
+  .page-active {
+    background-color: #04AA6D;
+    color: white;
+  } 
+
+}
+
+

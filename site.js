@@ -1,3 +1,7 @@
+// Daniel DeBenedetto
+// 2023-02-15
+
+// Fun page accordion box
 var acc = document.getElementsByClassName("accordion-box");
 var i;
 
@@ -12,3 +16,15 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+/* Hamburger button */
+function toggleNav() {
+  var x = document.getElementById("navLinks");
+  console.log(x)
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+} 
+

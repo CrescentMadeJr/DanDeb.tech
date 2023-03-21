@@ -1,41 +1,77 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="site.css" type="text/css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap">
-  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script rel="text/javascript" src="/site.js"></script>
-  <title>Home | DanDeB</title>
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="site.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script rel="text/javascript" src="/site.js" async></script>
+    <title>Contact | DanDeB</title>
+  </head>
   <body>
     <header class="page-header">
       <h1 class="title">DanDeB.tech</h1>
       <p class="welcome">Welcome to my little corner of the internet.</p>
     </header>
     <main class="page-content">
+    <!-- Navigation -->
+    <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+      <i class="fa fa-bars"></i>
+    </a>
     <nav class="site-navigation">
-      <ul class="nav-links">
+      <ul id="navLinks" class="nav-links">
         <li class="nav-link"><a href="index.html">Home</a></li>
         <li class="nav-link"><a href="about.html">About</a></li>
         <li class="nav-link"><a href="fun.html">Stuff</a></li>
-        <li class="nav-link active"><a href="contact.html">Contact</a></li>
+        <li class="nav-link page-active"><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <!-- Main content -->
+    <article>
+      <h2 class="article-heading">Contact Me</h2>
+      <p>Want to contact me? Don't. Eh, if you really want to enter your imformation below.</p>
 
-      <article>
-        <h2 class="article-heading">Contact Me</h2>
-        <p>Want to contact me? Don't. Well, if you really want to enter your imformation below.</p>
-      </article>
-      
+      <div class="contact-info">
+        <div class="name"></div>
+        <div class="email"></div>
+        <div>
+          <p class="message"></p>
+        </div>
+      </div>
+
+      <section class="contact-form">
+        <form action="#" method="post">
+          <div class="name-container">
+            <label for="full-name">Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+          </div>
+          <div class="email-container">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="message-container">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="button-container">
+            <button type="submit" id="submit">Submit</button>
+            <button type="reset" id="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+
+    </article>
     </main>
+    <!-- Page footer -->
     <footer class="page-footer">
-      <p class="copyleft">Copyleft 2023. All Rights Waived.</p>
+      <p class="copyleft"><a href="https://developer.mozilla.org/en-US/docs/Glossary/Copyleft">Copyleft 2023.</a> All Rights Waived.</p>
       <p><small>Made by Dano.  We're all mad here.</small></p>
     </footer>
+
   </body>
 </html>

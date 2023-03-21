@@ -1,7 +1,11 @@
 * {
   margin: 0;
+  max-width: 1200px;
 }
 
+
+
+nav > a:visited,
 a:visited,
 a:link {
   text-decoration: none;
@@ -12,7 +16,7 @@ a:link {
   display: flex;
   margin-top: 0.2em;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   background-color: #44475a;
 }
 
@@ -45,30 +49,53 @@ h3 {
   color: #ff79c6;
 }
 
+
+/* Navigation */
+
 .site-navigation {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* background-color: #6272a4; */
+  overflow: hidden;
+  background-color: #44475a;
+  position: relative;
 }
 
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0%;
+.site-navigation a {
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Hide links in nav */
+.site-navigation #navLinks {
+    display: none;
 }
 
 .nav-link {
   padding-inline: 5px;
 }
 
+.nav-links {
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0%;
+}
+
+.page-active {
+  color: #50fa7b;
+  border-top: 1px solid #50fa7b;
+  border-bottom: 1px solid #50fa7b;
+  border-radius: 2px;
+}
+
+/* End nav */
+
 .article-heading {
   padding-bottom: 5px;
 }
 
+.para {
+  padding-top: 5px;
+}
 .page-footer {
   display: flex;
   flex-direction: column;
@@ -76,25 +103,11 @@ h3 {
   padding-top: 20px;
   width: 100%;
   height: 40px;
-}
-
-/* mouse over link */
-a:hover {
-  color: #ff79c6;
-  transition: 20ms;
-}
-
-.active {
-  color: #50fa7b;
-  border-top: 1px solid #50fa7b;
-  border-bottom: 1px solid #50fa7b;
-}
-
-.page-footer {
   color: #bd93f9
 }
 
-.copyleft {
+.copyleft,
+.copyleft > a {
   color: #ffb86c;
 }
 
@@ -105,13 +118,8 @@ Accordion boxes */
   flex-direction: column;
 }
 
-.accordion-box  {
-  padding: 5px;
-}
-
-/* Buttons */
 .accordion-box {
-  background-color: #50fa7b;
+  background-color: #bd93f9;
   color: #282a36;
   cursor: pointer;
   width: 100%;
@@ -119,6 +127,7 @@ Accordion boxes */
   border: none;
   outline: none;
   transition: 0.4s;
+  padding: 5px;
 } 
 
 .active, .accordion-box:hover {
@@ -127,150 +136,130 @@ Accordion boxes */
 }
 
 .infobox {
-  padding: 0 18px;
+  padding: 10px;
   display: none;
-  background-color: #50fa7b;
+  background-color: #44475a;
   overflow: hidden;
 }
 
 .accordion-box:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  content: '\2771';
   font-size: 13px;
-  color: #777;
+  color: #282a36;
   float: right;
-  margin-left: 5px;
+
 }
 
 .active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  content: "\2770";
+}
+/*****************/
+
+/****************
+Contact Form */
+
+.contact-form {
+  margin: 15px;
 }
 
-/*****************
-Accordion boxes 
-
-body.fun {
-  height: calc(100% - 20px);
-  width: calc(100% - 20px);
-  margin: 0;
-}
-.accordion {
-  margin: auto;
-  width: 400px;
+label {
+  font-weight: 600;
+  padding-right: 2px;
 }
 
-.info-box {
-  position: relative;
-  background: white;
-    height: 64px;
-    transition: all .15s ease-in-out;
+#full-name,
+#email,
+#message {
+  border-radius: 4px;
 }
-.info-box::before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    pointer-events: none;
-    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
-}
-header.info-box {
-  background: #00BCD4;
-  z-index: 100;
-  cursor: initial;
-  box-shadow: 0 -1px 0 #e5e5e5,0 0 2px -2px rgba(0,0,0,.12),0 2px 4px -4px rgba(0,0,0,.24);
-}
-header .info-box-title {
-  margin: 0;
-  font-weight: normal;
-  font-size: 16pt;
-  color: white;
-  cursor: initial;
-}
-.info-box-title {
-  width: calc(100% - 40px);
-  height: 64px;
-  line-height: 64px;
-  padding: 0 20px;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
-}
-.info-box-content {
-  width: calc(100% - 40px);
-  padding: 30px 20px;
-  font-size: 11pt;
-  color: rgba(0,0,0,.54);
-  display: none;
-}
-.info-box-close {
-  position: absolute;
-  height: 64px;
+
+textarea
+input {
   width: 100%;
-  top: 0;
-  left: 0;
+  padding-left: 5px;
+}
+
+.name-container,
+.email-container,
+.message-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+
+.button-container {
+  padding-top: 10px;
+}
+
+button[type="reset"] {
+  background: transparent;
+  border: 0;
+  text-decoration: underline; 
+  color: #50fa7b;
   cursor: pointer;
-  display: none;
-}
-input:checked + .info-box {
-  height: auto;
-  margin: 16px 0;
-    box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
-}
-input:checked + .info-box .info-box-title {
-  border-bottom: 1px solid rgba(0,0,0,.18);
-}
-input:checked + .info-box .info-box-content,
-input:checked + .info-box .info-box-close {
-  display: inline-block;
-}
-.arrows section .info-box-title {
-  padding-left: 44px;
-  width: calc(100% - 64px);
-}
-.arrows section .info-box-title:before {
-  position: absolute;
-  display: block;
-  content: '\203a';
-  font-size: 18pt;
-  left: 20px;
-  top: -2px;
-  transition: transform .15s ease-in-out;
-  color: rgba(0,0,0,.54);
-}
-input:checked + section.info-box .info-box-title:before {
-  transform: rotate(90deg);
 }
 
-****************/
+button[type="submit"] {
+  border: solid 1px #50fa7b;
+  background: #50fa7b;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(75%);
+  transition: 50ms;
+}
 
 
+/*****************/
 
-
-
-
-
-/* 
-Mobile screen sizes
-*/
 
 /* Hide the welcome element in the header when the screen gets too small. This is specific to the size of the welcome sentance. */
-@media (max-width: 515px) 
-{
-  .welcome
-  {
+@media (max-width: 550px) {
+  .welcome {
     display: none;
   }
 }
 
-/* Change the navegation to be easier to use when the screen is too small. */
-@media (max-width: 250px) 
-{
+/* Adjust nav to a more desktop friendly layout. */
+@media (min-width: 250px) {
+  
+  .icon {
+    display: none;
+  }
+
+  .site-navigation #navLinks {
+    display: flex;
+  }
+
   .site-navigation {
-    align-items: start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  
   .nav-links {
-    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0%;
   }
+  
+  .nav-link {
+    padding-inline: 5px;
+  }
+
+  /* mouse over link */
+  a:hover,
+  .copyleft > a:hover {
+    color: #ff79c6;
+    transition: 20ms;
+  }
+  
 }
+
+
