@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script rel="text/javascript" src="/site.js" async></script>
+    <script rel="text/javascript" src="/site.js" defer></script>
     <title>Contact | DanDeB</title>
   </head>
   <body>
@@ -34,16 +34,10 @@
     <!-- Main content -->
     <article>
       <h2 class="article-heading">Contact Me</h2>
-      <p>Want to contact me? Don't. Eh, if you really want to enter your imformation below.</p>
-
-      <div class="contact-info">
-        <div class="name"></div>
-        <div class="email"></div>
-        <div>
-          <p class="message"></p>
-        </div>
-      </div>
-
+      <section class="contact-links">
+        <a href="https://www.linkedin.com/in/ddebenedetto"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/crescentmadejr"><i class="fa fa-github"></i></a>
+      </section>
       <section class="contact-form">
         <form action="#" method="post">
           <div class="name-container">
@@ -63,6 +57,15 @@
             <button type="reset" id="reset">Reset</button>
           </div>
         </form>
+
+        <div class="contact-info">
+          <div class="name"></div>
+          <div class="email"></div>
+          <div>
+            <p class="message"></p>
+          </div>
+        
+        </div>
       </section>
 
     </article>

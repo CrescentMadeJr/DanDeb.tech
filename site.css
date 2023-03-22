@@ -3,21 +3,19 @@
   max-width: 1200px;
 }
 
-
-
 nav > a:visited,
 a:visited,
 a:link {
-  text-decoration: none;
   color: #f8f8f2;
+  text-decoration: none;
 }
 
 .page-header {
-  display: flex;
-  margin-top: 0.2em;
-  justify-content: space-between;
   align-items: center;
   background-color: #44475a;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.2em;
 }
 
 .page-header,
@@ -51,11 +49,12 @@ h3 {
 
 
 /* Navigation */
-
 .site-navigation {
   overflow: hidden;
   background-color: #44475a;
   position: relative;
+  max-width: 8ch;
+  align-items: left;
 }
 
 .site-navigation a {
@@ -69,8 +68,8 @@ h3 {
     display: none;
 }
 
-.nav-link {
-  padding-inline: 5px;
+.nav-link > a {
+  padding: 5px;
 }
 
 .nav-links {
@@ -80,17 +79,18 @@ h3 {
   padding: 0%;
 }
 
-.page-active {
+.page-active > a {
   color: #50fa7b;
-  border-top: 1px solid #50fa7b;
-  border-bottom: 1px solid #50fa7b;
-  border-radius: 2px;
+  border-left: 1px solid #50fa7b;
+  border-right: 1px solid #50fa7b;
+  border-radius: 3px;
 }
 
 /* End nav */
 
 .article-heading {
   padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .para {
@@ -103,7 +103,9 @@ h3 {
   padding-top: 20px;
   width: 100%;
   height: 40px;
-  color: #bd93f9
+  color: #bd93f9;
+  position: fixed;
+  bottom: 0;
 }
 
 .copyleft,
@@ -158,6 +160,15 @@ Accordion boxes */
 /****************
 Contact Form */
 
+.contact-links {
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.contact-links > a {
+}
+
 .contact-form {
   margin: 15px;
 }
@@ -170,7 +181,7 @@ label {
 #full-name,
 #email,
 #message {
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 textarea
@@ -202,7 +213,7 @@ button[type="reset"] {
 button[type="submit"] {
   border: solid 1px #50fa7b;
   background: #50fa7b;
-  border-radius: 4px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -216,6 +227,7 @@ button:hover {
 
 
 /* Hide the welcome element in the header when the screen gets too small. This is specific to the size of the welcome sentance. */
+/* Change to min width - Find more things to change - Alined left on desktop->for mobile screen take up 100%-> tablet size, center with margin on left and right ; then do it to the desktoip size - Max 55 characters side to side(55ch would be that mana chars wide) */
 @media (max-width: 550px) {
   .welcome {
     display: none;
@@ -223,7 +235,7 @@ button:hover {
 }
 
 /* Adjust nav to a more desktop friendly layout. */
-@media (min-width: 250px) {
+@media (min-width: 376px) {
   
   .icon {
     display: none;
@@ -239,6 +251,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
   }
   
   .nav-links {
@@ -250,8 +263,22 @@ button:hover {
   }
   
   .nav-link {
-    padding-inline: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
+
+  .nav-link > a {
+    padding: 5px;
+  }
+
+  .page-active > a {
+    color: #50fa7b;
+    border-top: 1px solid #50fa7b;
+    border-bottom: 1px solid #50fa7b;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 3px;
+  }  
 
   /* mouse over link */
   a:hover,
