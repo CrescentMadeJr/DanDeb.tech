@@ -10,6 +10,14 @@
 
 ## Changes
 
+### 20230327
+* More work on CSS for mobile > tablet/desktop
+    * Added max width and centering.
+    * Fixed some padding.
+    * Some organizing.
+* Contact form work.  
+    * Worked on the contact form javascript and how to show it back to the user.
+
 ### 20230322
 * Added some foxes recommened.
     * Easier buttons, some spacing.  Still more to do.

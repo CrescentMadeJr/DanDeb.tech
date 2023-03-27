@@ -14,6 +14,7 @@
     <title>Contact | DanDeB</title>
   </head>
   <body>
+    <!-- Header -->
     <header class="page-header">
       <h1 class="title">DanDeB.tech</h1>
       <p class="welcome">Welcome to my little corner of the internet.</p>
@@ -38,39 +39,32 @@
         <a href="https://www.linkedin.com/in/ddebenedetto"><i class="fa fa-linkedin"></i></a>
         <a href="https://github.com/crescentmadejr"><i class="fa fa-github"></i></a>
       </section>
+      
       <section class="contact-form">
-        <form action="#" method="post">
-          <div class="name-container">
+        <div id="output"></div>
+        <form action="#" method="post" id="contact-form">
+          <div class="name-container input-group">
             <label for="full-name">Name:</label>
-            <input type="text" id="full-name" name="full-name" required>
+            <input type="text" id="fullname" name="fullname" required>
           </div>
-          <div class="email-container">
+          <div class="email-container input-group">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
           </div>
-          <div class="message-container">
+          <div class="message-container input-group">
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
           </div>
-          <div class="button-container">
+          <div class="button-container input-group">
             <button type="submit" id="submit">Submit</button>
             <button type="reset" id="reset">Reset</button>
           </div>
-        </form>
-
-        <div class="contact-info">
-          <div class="name"></div>
-          <div class="email"></div>
-          <div>
-            <p class="message"></p>
-          </div>
-        
-        </div>
+        </form>        
       </section>
 
     </article>
     </main>
-    <!-- Page footer -->
+    <!-- Footer -->
     <footer class="page-footer">
       <p class="copyleft"><a href="https://developer.mozilla.org/en-US/docs/Glossary/Copyleft">Copyleft 2023.</a> All Rights Waived.</p>
       <p><small>Made by Dano.  We're all mad here.</small></p>
