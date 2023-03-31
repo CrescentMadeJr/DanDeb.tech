@@ -21,8 +21,7 @@ The site is set to center on larger screens and extent the paragraph size to 65 
 
 THere are 33 seperate javascript code sets for the different parts of the site.  The first is to show an hide the hamburger menu.  There is also a set for the accordion boxes.  The last is for the contact form.  THis took me quite the amount of work to figure out and a lot of help.  Especially when I had it working and in my testing I decided to add thousands of characters to the message box.
 
-The "contact" form takes data into an array and then displays the information back to the user with a little message.
+The "contact" form takes data into an array and then displays the information back to the user with a little message. 
 
-I attempted to make the site as acessable as possible.  
-
-### Acessability
+### Acessability'
+I ran some accessibility checks.  The only suggestions were the emnpty links that are using font awesome icons.  I added titles to them for that.
