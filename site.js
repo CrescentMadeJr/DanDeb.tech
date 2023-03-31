@@ -1,26 +1,23 @@
 // Daniel DeBenedetto
 // 2023-02-15
 
-// Need to fix the nav button when expanded. 
-//if classlist.contains None  -- classlist remove
-
-// Hamburger menu 
+// Hamburger menu
 function toggleNav() {
   const x = document.getElementById("navLinks");
-  console.log(x)
+  console.log(x);
   if (x.style.display === "flex") {
     x.style.display = "none";
   } else {
     x.style.display = "flex";
   }
-} 
+}
 
 // Fun page accordion box
 const acc = document.getElementsByClassName("accordion-box");
 let i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
     const infobox = this.nextElementSibling;
     if (infobox.style.display === "block") {
@@ -32,26 +29,52 @@ for (i = 0; i < acc.length; i++) {
 }
 
 //Contact form
-const form = document.querySelector('#contact-form');
-const output = document.querySelector('#output');
+const form = document.querySelector("#contact-form");
+const output = document.querySelector("#output");
+const message = document.querySelector("#message");
 
-form.addEventListener('submit', function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   // Get form data
   const formData = new FormData(form);
   const data = {};
-  formData.forEach((value, key) => data[key] = value);
+  formData.forEach((value, key) => (data[key] = value));
 
-  // Save data to session storage.
-  sessionStorage.setItem('contactData', JSON.stringify(data));
+  // Save data to session storage
+  sessionStorage.setItem("contactData", JSON.stringify(data));
 
-  // Display saved data from seesion storage
-  const savedData = JSON.parse(sessionStorage.getItem('contactData'));
+  // Check if any form data has been entered
+  const isEmpty = Object.values(data).every((x) => x === null || x === "");
+  if (isEmpty) {
+    output.innerHTML = "";
+    return;
+  }
+
+  // Display information back to the user
+  const savedData = JSON.parse(sessionStorage.getItem("contactData"));
   output.innerHTML = `
-  <section class="
-    <p>Name: ${savedData.fullname}</p>
-    <p>Email: ${savedData.email}</p>
-    <p>Message: ${savedData.message}</p>
+    <p class="message-title">An email will be not sent with this information.  Data is not saved.  Thank you and have a nice day.</p>
+    <p class="message">From: ${savedData.email}</p>
+    <p class="message">Subject: Message from ${savedData.name}</p>
+    <p class="message">Message: ${savedData.message}</p>
   `;
+  // Clear the form inputs
+  nameInput.value = "";
+  emailInput.value = "";
+  messageInput.value = "";
+});
+
+// Set a character limit for the message.
+message.addEventListener("input", function () {
+  const maxChars = parseInt(message.getAttribute("maxlength"));
+  const charsEntered = message.value.length;
+
+  if (charsEntered > maxChars) {
+    message.setCustomValidity(
+      `You have exceeded the maximum character limit of ${maxChars} characters.`
+    );
+  } else {
+    message.setCustomValidity("");
+  }
 });

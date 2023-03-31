@@ -228,6 +228,15 @@ button[type="submit"]:hover {
   padding: 10px 0px 10px 0px;
 }
 
+.message-title {
+  color: #ffb86c;
+  padding-bottom: 2px;
+}
+
+.message {
+  padding-left: 10px;
+}
+
 /*****************/
 /* Adjust nav to a more tablet/desktop friendly layout. */
 @media (min-width: 376px) {
