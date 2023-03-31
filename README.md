@@ -23,5 +23,5 @@ THere are 33 seperate javascript code sets for the different parts of the site. 
 
 The "contact" form takes data into an array and then displays the information back to the user with a little message. 
 
-### Acessability'
-I ran some accessibility checks.  The only suggestions were the emnpty links that are using font awesome icons.  I added titles to them for that.
+### Accessibility'
+I ran some accessibility checks.  The only suggestions were the emnpty links that are using font awesome icons.  I added titles to them.
