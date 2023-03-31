@@ -59,10 +59,6 @@ form.addEventListener("submit", function (e) {
     <p class="message">Subject: Message from ${savedData.name}</p>
     <p class="message">Message: ${savedData.message}</p>
   `;
-  // Clear the form inputs
-  nameInput.value = "";
-  emailInput.value = "";
-  messageInput.value = "";
 });
 
 // Set a character limit for the message.

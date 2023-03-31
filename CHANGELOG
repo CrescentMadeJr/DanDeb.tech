@@ -10,6 +10,11 @@
 
 ## Changes
 
+### 20230330 - A
+* Accessibility changes
+* Removed sitemap.
+* Removed some of the javascript that I did not get working and not needed.
+
 ### 20230330
 * Finished up the contact form.
 * Fixed javascript path in header for github pages.  The site is now fully functional on that platform.  Tweaked a few things in css for looks.
